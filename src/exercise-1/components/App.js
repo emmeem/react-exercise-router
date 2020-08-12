@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Redirect, Route, Link, Switch} from 'react-router-dom';
 import Home from '../pages/Home';
 import MyProfile from '../pages/MyProfile';
 import AboutUs from '../pages/AboutUs';
@@ -17,6 +17,7 @@ class App extends Component {
           <Link to="/about-us" className="Header">About Us</Link>
          <Switch>
            <Route path="/products"  component={Products} />
+           <Redirect from='/goods' to='/products' />
            <Route exact path="/my-profile" component={MyProfile} />
            <Route exact path="/about-us" component={AboutUs} />
            <Route path="/" component={Home} />
