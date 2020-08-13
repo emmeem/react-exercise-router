@@ -13,11 +13,6 @@ class Products extends Component {
              className="pro">TV</Link></p>
              <p><Link to={`${this.props.match.url}/3`} 
              className="pro">Pencil</Link></p>
-            <Switch>
-            <Route exact  path={`${this.props.match.url}/:id`} 
-            component={ProductDetails} />
-            </Switch>
-            
         </section>
         );
     }
