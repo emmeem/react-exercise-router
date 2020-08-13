@@ -14,9 +14,9 @@ class App extends Component {
           <Switch>
           <Redirect from='/about' to='/1'/>
           <Route exact path='/about' component={About} />
-          <Route exact path='/notMatch' component={NotMatch} />
           <Route exact path='/' component={Home} />
-          <Route exact path='/:user' component={User} />
+          <Route exact path='/:user(\d+)' component={User} />
+          <Route exact path='/:id' component={NotMatch} />
           </Switch>
         </Router>
       </div>
