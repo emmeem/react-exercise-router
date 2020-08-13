@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import MyProfile from '../pages/MyProfile';
 import AboutUs from '../pages/AboutUs';
 import Products from '../../exercise-2/pages/Products'
+import ProductDetails from '../../exercise-2/pages/ProductDetails'
+
 
 class App extends Component {
   render() {
@@ -16,7 +18,8 @@ class App extends Component {
           <Link to="/my-profile" className="Header">My Profile</Link>
           <Link to="/about-us" className="Header">About Us</Link>
          <Switch>
-           <Route path="/products"  component={Products} />
+           <Route path="/products/:id"  component={ProductDetails} />
+           <Route exact path="/products"  component={Products} />
            <Redirect from='/goods' to='/products' />
            <Route exact path="/my-profile" component={MyProfile} />
            <Route exact path="/about-us" component={AboutUs} />

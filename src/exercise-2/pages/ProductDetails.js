@@ -24,11 +24,8 @@ class ProductDetails extends Component {
         return (
             <section>
                 <h2>Product Details:</h2>
-                <p>{dataItem.name}</p>
-                <p>{dataItem.id}</p>
-                <p>{dataItem.price}</p>
-                <p>{dataItem.quantity}</p>
-                <p>{dataItem.desc}</p>
+                <p>{Object.keys(dataItem).map((key) => <p>{dataItem[key]}</p>)}
+                </p>
             </section>
         );
     }
