@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
-import ProductDetails from './ProductDetails'
+import { Link} from 'react-router-dom';
 
 class Products extends Component {
     render() {
